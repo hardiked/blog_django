@@ -1,0 +1,26 @@
+h1{
+	color:#777777;
+}
+
+img{
+
+	width: 10px;
+	height: 10px;
+}
+
+.wmd-panel{
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+.red{
+	color: black;
+}
+
+.comment-reply{
+	display: none;
+}
+
+.requirelogin{
+	color: red;
+}

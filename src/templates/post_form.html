@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head %}
+{{ form.media }}
+{% endblock %}
+
+{% block content %}
+{{block.super}} <!--used to call the super block first -->
+<div class='col-sm-6'>
+	<h1>Preview</h1>
+	<div class="content-preview">
+		<h3 id="preview-title"></h3>
+		<p id="preview-content"></p>
+	</div>
+</div>
+<div class="col-sm-6">
+<h1 class="red">Form</h1>
+
+<form method="POST" action='' enctype='multipart/form-data'>{% csrf_token %}
+{{ form|crispy }}
+<input type="submit" value="Create Post" class="btn btn-default" />
+</form>
+</div>
+{% endblock content %}
